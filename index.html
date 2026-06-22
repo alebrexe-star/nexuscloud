@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nexuscloud SaaS</title>
+</head>
+
+<body style="background:#111;color:white;font-family:Arial;text-align:center;">
+
+<h1>☁️ Nexuscloud SaaS</h1>
+
+<h2>💳 Planos</h2>
+
+<p>
+Free • Gold (R$5,90) • Diamond (R$35) • Esmerald (R$90) • Opala (R$150)
+</p>
+
+<hr>
+
+<h2>📤 Upload Bot</h2>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+<input type="file" name="file" required>
+<button>Enviar</button>
+</form>
+
+<hr>
+
+<h2>🤖 Bots</h2>
+
+{% for bot in bots %}
+<p>
+{{ bot }}
+<a href="/start/{{ bot }}">▶ Start</a>
+<a href="/restart/{{ bot }}">🔄 Restart</a>
+</p>
+{% endfor %}
+
+</body>
+</html>
